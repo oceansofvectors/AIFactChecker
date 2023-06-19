@@ -1,3 +1,4 @@
+import openai
 import speech_recognition as sr
 
 from logs import logger
@@ -53,3 +54,28 @@ class AudioTranscription:
             if audio:
                 queue.put(audio)
 
+    def save_audio(self, audio_data, file_name="audio.wav"):
+        with open(file_name, "wb") as f:
+            f.write(audio_data.get_wav_data())
+
+    def transcribe_audio(self, audio_data):
+        """
+        Function to transcribe audio using OpenAI's Whisper model.
+        """
+        # Save the AudioData to a file
+        file_path = "audio.wav"
+        self.save_audio(audio_data, file_path)
+        logger.info(f"Saved audio data to file: {file_path}")
+
+        # Open the audio file
+        audio_file = open(file_path, "rb")
+
+        # Send the audio file to the Whisper ASR API
+        logger.info(f"Sending audio file to Whisper API for transcription")
+        transcript = openai.Audio.transcribe("whisper-1", audio_file)
+
+        # Extract the transcription text
+        transcription = transcript.get('text')
+
+        logger.info(f"Transcription completed: {transcription}")
+        return transcription

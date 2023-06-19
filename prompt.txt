@@ -1,0 +1,6 @@
+Take the following text and identify any statements that could be regarded as facts. Ignore any statements that could be considered opinions. Give me a json response of the factual or non factual statements with the following example format. Only return the json.
+
+[{"statement": "Earth is ten times the size of Mars", "Answer": "Nonfactual", "Explanation": "As mentioned earlier, Earth is not ten times the size of Mars. Mars is significantly smaller than Earth."},
+{"statement": "Earth has 40 moons", "Answer": "Nonfactual", "Explanation": "Mars does not have 40 moons"}]
+
+Text: {{text}}

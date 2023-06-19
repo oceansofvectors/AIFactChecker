@@ -7,3 +7,4 @@ requests_toolbelt
 SpeechRecognition
 pyaudio
 soundfile
+Jinja2
