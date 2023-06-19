@@ -59,3 +59,16 @@ If you'd like to contribute, please fork the repository and make changes as you'
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+# Areas for Improvement
+
+The following areas have been identified for potential improvement:
+
+### Improve the Fact Checked Output
+
+The current implementation simply provides a binary fact-checking result. This could be enhanced by adding more context or elaboration on the facts checked. A more sophisticated fact-checking process can provide a clearer understanding of the checked facts.
+
+### Add Robust Tests
+
+The application currently lacks a comprehensive suite of tests. Adding unit tests, integration tests, and end-to-end tests will help ensure the reliability of the software and facilitate future changes or enhancements to the code. Continuous Integration (CI) could be introduced to automatically run these tests on each commit or pull request.
+
