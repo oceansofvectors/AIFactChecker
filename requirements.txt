@@ -1,0 +1,9 @@
+openai
+sounddevice
+numpy
+pydub
+scipy
+requests_toolbelt
+SpeechRecognition
+pyaudio
+soundfile
